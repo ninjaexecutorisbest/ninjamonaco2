@@ -9,10 +9,12 @@
 
 // Assuming you have initialized Monaco editor in a variable called `editor`
 function getCurrentText() {
-    // Access the model of the editor and get its value
     const currentText = editor.getModel().getValue();
+    window.external.sendTextToWinForms(currentText);
     console.log(currentText);
     return currentText;
+
 }
+
 
 //# sourceMappingURL=../../min-maps/vs/loader.js.map
